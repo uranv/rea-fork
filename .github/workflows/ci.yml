@@ -1,20 +1,8 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main, "release/*"]
-  schedule:
-    - cron: "23 0-2,4-23 * * *"
-    - cron: "23 3 * * *"
   workflow_dispatch:
-  workflow_call:
-    inputs:
-      source_sha:
-        description: Exact qualification source; must match the caller revision.
-        required: true
-        type: string
+
 
 permissions:
   contents: read
